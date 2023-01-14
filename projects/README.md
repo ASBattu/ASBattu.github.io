@@ -24,6 +24,7 @@ This page is still unifinished and projects will be added once fully documented.
 
 ## Topic Summaries and Notes
 * [Deep Reinforcement Learning]{:.heading.flip-title} --- Basic definitions and topics.
+* [Machine Learning Tensorflow]{:.heading.flip-title} --- Definitions and topics.
 
 ## Deep Reinforcement Learning
 * [Unit 1 - Lunar Lander]{:.heading.flip-title} --- Execution and description
@@ -35,6 +36,7 @@ This page is still unifinished and projects will be added once fully documented.
 
 
 ## Tensorflow Tutorials
+* [1 - Image Classification]{:.heading.flip-title} --- Execution and description
 
 ## Deep Learning
 * Handwriting recognition - dead sea scrolls
@@ -70,4 +72,6 @@ This page is still unifinished and projects will be added once fully documented.
 
 
 [Deep Reinforcement Learning]: desc_deep_rl.md
+[Machine Learning Tensorflow]: desc_ml_basics.md
 [Unit 1 - Lunar Lander]: 1_lunar_lander.md
+[1 - Image Classification]: 1_image_classification.md
