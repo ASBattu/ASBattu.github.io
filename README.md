@@ -1,5 +1,3 @@
-# README
-
 Welcome to my GitHub Pages repository for my static website!
 ## Website URL
 
