@@ -20,6 +20,9 @@ sitemap: false
 * The purpose of the study is to improve task efficiency and reliability by proposing an effective communication channel, which is achieved through the gesture recognition method.
 * The proposed communication channel has potential applications in industries such as healthcare, manufacturing, and logistics. Or anywhere where a Robot and a Human must interact.
 
+
+* **Video demonstrations for each method and the complete architecture can be found below!!**
+
 ## Motivation
 * *Goal*:  
  Enhance communication between humans and robots collaborating in dynamic environments.
@@ -55,8 +58,9 @@ To communicate the desired destination of the object to the robot, one can simpl
 {:.figure}
 
 
-Video example of the method:
+Video example of the method: 
 
+[![Point and Target method](https://i.gyazo.com/6900754e1e5c1154a78bd939bc7c81a1.jpg)](//youtu.be/0pbEKXAZCGU "Point and Target method")
 
 
 
@@ -116,7 +120,14 @@ From the 3D coordinates obtained in map frame, a line is dran from the two 3D po
 
 * **For each of the gestures, a custom dataset was created, cleaned, augmented and split through which a custom 1D-CNN model was created, trained and compared with other architectures to find the best performing model.**
 
-Video example can be seen here:
+Video example of gestures performed without the object held can be seen here:
+
+[![Without object](https://i.gyazo.com/131ffe5809d1f8407e8a64600b3a3a1f.jpg)](//youtu.be/4bcMJAeokP4 "Without object")
+
+
+Video example of gestures performed through the object held can be seen here:
+
+[![Without object](https://i.gyazo.com/d75007fc80f3792feadadf275ac70c52.jpg)](//youtu.be/R7JWwbeq5Bc "Without object")
 
 
 
@@ -147,12 +158,19 @@ Experimental Setup
 
 At timestep 30, an external force affected the arm, causing deviations in the torque values. This triggers the robot to switch to gravity compensation mode for two seconds.
 
-[INSERT VIDEO HERE]
+Video demonstration and description of the controllers and the 'jiggle' mechanism can be seen in this video
+
+[![Jiggle](https://i.gyazo.com/3581dd20382fdff39cf034180d4bbd61.jpg)](//youtu.be/I7_wJFjYnoU "Jiggle")
+
 
 
 
 <hr style="border:2px solid gray">
 # Final Architecture
+
+Video demonstration for the complete architecture can be seen below
+[![Complete demonstration](https://i.gyazo.com/cc4584fa660beabf68b19100901bf0f2.jpg)](//youtu.be/AoqYVja-J5c "Complete Architecture")
+
 
 <p align="center" width="100%">
     <img width="100%" src="https://i.gyazo.com/4988b9a4eff483669fd2db984f253142.png">
