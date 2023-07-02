@@ -38,8 +38,8 @@ This page is still unifinished and projects will be added once fully documented.
 * Moorebot 'Scout' - modules from scratch
 
 
-## Tensorflow Tutorials
-* [1 - Image Classification]{:.heading.flip-title} --- Execution and description
+<!-- ## Tensorflow Tutorials
+* [1 - Image Classification]{:.heading.flip-title} --- Execution and description -->
 
 ## Deep Learning
 * Handwriting recognition - dead sea scrolls
