@@ -29,6 +29,9 @@ This page is still unifinished and projects will be added once fully documented.
 * [Deep Reinforcement Learning]{:.heading.flip-title} --- Basic definitions and topics.
 * [Machine Learning Tensorflow]{:.heading.flip-title} --- Definitions and topics.
 
+## Sentiment Analysis - Docker / AWS implementation
+* [Sentiment Analysis]{:.heading.flip-title} --- Execution and description
+
 ## Deep Reinforcement Learning
 * [Unit 1 - Lunar Lander]{:.heading.flip-title} --- Execution and description
 
@@ -79,3 +82,4 @@ This page is still unifinished and projects will be added once fully documented.
 [Unit 1 - Lunar Lander]: 1_lunar_lander.md
 [1 - Image Classification]: 1_image_classification.md
 [Communication in Human-Robot Collaboration]: master_thesis.md
+[Sentiment Analysis]: sentiment_analysis.md
