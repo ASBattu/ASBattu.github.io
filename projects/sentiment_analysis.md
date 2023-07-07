@@ -58,15 +58,27 @@ Barplot showing the frequency of the commonly used negative words present in the
 {:.figure}
 <hr style="border:2px solid gray">
 
-### Data processing
+# Data Processing
 
-* Remove stopwords
-* Tokenize
-* Lamentize
-* And other pre-processing techniques (lowercase)
+  - Data pre-processing steps included cleaning the input text by removing HTTP/HTTPS links, converting it to lowercase, eliminating punctuation, numbers, stopwords and reducing excessive whitespace. 
+  - The data per class was balanced for training the model.
+  - These steps ensure that the data is standardized and free from irrelevant elements.
 
+## Stemming vs Lemmatization
 
-## Fine Tune model
+<p align="center" width="100%">
+    <img width="70%" src="https://i.gyazo.com/7fe9cedadc978a8eaaaa89b979580a25.png">
+</p>
+Stemming vs Lemmatization [Img Source](https://www.turing.com/kb/stemming-vs-lemmatization-in-python)
+{:.figure}
+
+  - Stemming simplifies words by removing suffixes, while lemmatization transforms words to their base form.
+    - Stemming is faster and applies simple rules, but the resulting stems may not be the actual words.
+    - Lemmatization considers word meawning and context, producing accurate base forms.
+
+<hr style="border:2px solid gray">
+
+# Fine-Tuning   model
 
 * Why I finetuned a model
 * What model was chosen for finetuning
