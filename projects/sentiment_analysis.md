@@ -107,8 +107,8 @@ The fine-tuned model was finally deployed in two different ways:
 
 
 ## Locally Hosted Docker Image:
-  - The model was hosted within a Docker container locally.
-  - A RESTful API was set up to interact with the model for making predictions.
+  - The model was hosted within a Docker container locally using **TFServing**.
+  - A **RESTful API** was set up to interact with the model for making predictions.
 
 - The SentimentAnalyzer class performs sentiment analysis using an API endpoint.
   - It takes the API url, a tokenizer, and a stoplist as parameters in its constructor.
