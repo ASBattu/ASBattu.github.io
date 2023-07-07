@@ -78,11 +78,28 @@ Stemming vs Lemmatization [Img Source](https://www.turing.com/kb/stemming-vs-lem
 
 <hr style="border:2px solid gray">
 
-# Fine-Tuning   model
+# Fine-Tuning BERT language model
 
-* Why I finetuned a model
-* What model was chosen for finetuning
-* How the model was finetuned
+* Why did I fine-tune a model?
+  - The decision to fine-tune a model was made because training a model from scratch with the available data was not feasible due to limited data and the time it would have taken. However, various model configurations were explored during the process to reach this decision.
+
+* What model was chosen for fine-tuning?
+  - The chosen model for fine-tuning was the base **BERT (Bidirectional Encoder Representations from Transformers)** model, as it was freely available (vs GPT model) and considerably suitable for the task at hand.
+
+* How was the model fine-tuned?
+  - The model was fine-tuned by **tokenizing** the text with a maximum length of 18 tokens (value found experimentally). It was then compiled with Adam optimizer, using **sparse categorical cross-entropy loss**. The model underwent a total of **5 epochs** during the fine-tuning training process.
+
+## Tokenization in NLP
+
+<p align="center" width="100%">
+    <img width="70%" src="https://i.gyazo.com/02ab0eb4eacbae6c552b133326ec62d0.png">
+</p>
+Tokenization [Img Source](https://medium.com/@ajay_khanna/tokenization-techniques-in-natural-language-processing-67bb22088c75)
+{:.figure}
+
+- Tokenization is a fundamental process in NLP that breaks text into smaller units called tokens. These tokens can be words, characters, or subwords, depending on the tokenization strategy used.
+
+- The **BERT Tokenizer** used in this project is specifically designed for the BERT model. It employs a technique called **WordPiece tokenization**, which splits words into subwords. This approach allows the tokenizer to handle out-of-vocabulary (OOV) words and capture the more fine-grained linguistic information present in the text.
 
 ## Deployment of trained model
 
