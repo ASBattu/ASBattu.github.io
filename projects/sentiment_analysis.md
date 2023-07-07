@@ -101,15 +101,106 @@ Tokenization [Img Source](https://medium.com/@ajay_khanna/tokenization-technique
 
 - The **BERT Tokenizer** used in this project is specifically designed for the BERT model. It employs a technique called **WordPiece tokenization**, which splits words into subwords. This approach allows the tokenizer to handle out-of-vocabulary (OOV) words and capture the more fine-grained linguistic information present in the text.
 
-## Deployment of trained model
+# Deployment of trained model
 
-* Hosted in docker image locally in a container
-  - RESTful API
+The fine-tuned model was finally deployed in two different ways:
 
-* Hosted in S3 bucket on AWS
-  - RESTful API calls for inference
-  - AWS Sagemaker for hosting and endpoint creation
 
-  - Tried AWS comprehend, but finetuning model to custom dataset costs money but is possible
+## Locally Hosted Docker Image:
+  - The model was hosted within a Docker container locally.
+  - A RESTful API was set up to interact with the model for making predictions.
+
+- The SentimentAnalyzer class performs sentiment analysis using an API endpoint.
+  - It takes the API url, a tokenizer, and a stoplist as parameters in its constructor.
+  - The clean_text() method cleans the input text by removing URLs, punctuation, numbers, and stop words.
+  - The make_prediction_api() method sends a POST request to the API and returns the predictions.
+  - The predict_sentiment() method cleans the text, tokenizes it, makes the API call, and returns the predicted sentiment, confidence level, and API response as a list.
+
+
+```python
+class SentimentAnalyzer:
+    def __init__(self, url, tokenizer, stoplist):
+        self.url = url
+        self.tokenizer = tokenizer
+        self.stoplist = stoplist
+
+    def clean_text(self, text):
+        # Remove http / https links
+        text = re.sub(r'http\S+|https\S+', '', text)
+        # Convert to lowercase
+        text = text.lower()
+        # Remove punctuation
+        text = text.translate(str.maketrans('', '', string.punctuation))
+        # Remove numbers
+        text = re.sub(r'\d+', '', text)
+        # Remove stopwords
+        text = ' '.join(word for word in text.split() if word not in stoplist)
+        # Remove extra whitespaces
+        text = re.sub(r'\s+', ' ', text).strip()
+        return text
+
+    def make_prediction_api(self, instances):
+        data = json.dumps({"signature_name": "serving_default", "instances": instances})
+        headers = {"content-type": "application/json"}
+        json_response = requests.post(self.url, data=data, headers=headers)
+        predictions = json.loads(json_response.text)
+        return predictions
+
+    def predict_sentiment(self, text):
+        # Clean input text
+        text = self.clean_text(text)
+
+        # Tokenize the cleaned text
+        encoded_input_api = self.tokenizer(
+            text,
+            max_length=18,
+            padding="max_length",
+            truncation=True,
+            return_tensors='tf'
+        )
+
+        # Get text tensor values
+        input_ids = encoded_input_api["input_ids"]
+        attention_mask = encoded_input_api["attention_mask"]
+        token_type_ids = encoded_input_api["token_type_ids"]
+
+        # Prepare instance for API call
+        instances_api = [{
+            "input_ids": input_ids.numpy().tolist()[0],
+            "attention_mask": attention_mask.numpy().tolist()[0],
+            "token_type_ids": token_type_ids.numpy().tolist()[0]
+        }]
+
+        # Make API call
+        result_api = self.make_prediction_api(instances_api)
+
+        # Calculate Confidence level of the prediction and get the predicted label
+        logits = result_api['predictions'][0]
+        probabilities = tf.nn.softmax(logits)
+        predicted_label = tf.argmax(probabilities).numpy()
+        confidence_level = np.max(probabilities)
+
+        # Map the predicted label to its corresponding sentiment category
+        sentiment_categories = ["Negative", "Positive"]
+        predicted_sentiment = sentiment_categories[predicted_label]
+
+        return [result_api, predicted_sentiment, confidence_level]
+```
+
+
+<p align="center" width="100%">
+    <img width="70%" src="https://i.gyazo.com/723ab5b02d9510d0e50483c7f0b2274e.png">
+</p>
+Output for calling this code:
+{:.figure}
+
+
+
+## AWS S3 Bucket Deployment:
+  - The model was hosted in an S3 bucket on Amazon Web Services (AWS).
+  - RESTful API calls were made to the model for performing inference.
+  - AWS SageMaker was used for hosting the model and creating an endpoint.
+
+    Additionally, I attempted to make use of AWS Comprehend for the task. However, fine-tuning the model with a custom dataset incurs costs which I decided not to take, but is a feasible option that I can perform if needed.
 
 
