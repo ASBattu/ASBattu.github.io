@@ -23,20 +23,40 @@ sitemap: false
 
 * What the data was and how it was collected?
   - The data used for this project was collected from **Twitter**. Specifically, the data consisted of sentiment-labeled tweets obtained from previous challenges related to the ongoing **["SemEval"](https://semeval.github.io/)** series of evaluation and computational semantic analysis.
+  - The data collected process involved gathering and merging sentiment-tagged tweets. The tweets had already been tagged with either positive or negative sentiment labels.
+  - The project did **not** consider neutral sentiment texts, and it was a deliberate choice made to showcase the feasibility of me developing the project. However, this requirement can be modified if necessary for future cases.
+
+<hr style="border:2px solid gray">
+## Positive Wordcloud
+<img align="center" src="https://i.gyazo.com/445f47201753aec3ab38f379cb95d28d.png" alt="drawing" width="850" height="200" style="display:block">
+Wordcloud showing the most commonly used positive words present in the text
+{:.figure}
+
+<hr style="border:2px solid gray">
+## Negative Wordcloud
+<img align="center" src="https://i.gyazo.com/c00c750add41cf10010383849d55e59e.png" alt="drawing" width="850" height="200" style="display:block">
+Wordcloud showing the most commonly used negative words present in the text
+{:.figure}
+
+<hr style="border:2px solid gray">
+## Commonly used Positive Words frequency
+
+<p align="center" width="100%">
+    <img width="50%" src="https://i.gyazo.com/1991df7e89b6c736d95e02cd09f28bb1.png">
+</p>
+Barplot showing the frequency of the commonly used positive words present in the text
+{:.figure}
+
+<hr style="border:2px solid gray">
+## Commonly used Negative Words frequency
 
 
-
- - Twitter sentiment marked data collected from previous challenge. The data was collected from the ongoing "SemEval" series of evaluation and computational semantic analysis systems and data was collected from this website and merged together.
- - The data was already compiled and sentiment tagged tweets from previous years.
- Only using Negative and positive sentiment comments, not using neutral sentiment texts, as I just want to showcase that the project is possible and this requirement can be changed if needed.
-
-
-
-* Wordcloud showing most positive words and most negative words in the text
-  - [Image here]
-
-* Barplot showing frequency of words in both positive and negative texts
-  - [Images here]
+<p align="center" width="100%">
+    <img width="50%" src="https://i.gyazo.com/b86c0187f89421e04e5581c8770aecd6.png">
+</p>
+Barplot showing the frequency of the commonly used negative words present in the text
+{:.figure}
+<hr style="border:2px solid gray">
 
 ### Data processing
 
