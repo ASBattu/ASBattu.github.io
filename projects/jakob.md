@@ -1,6 +1,6 @@
 ---
 layout: page
-title: JACOBBBBB
+title: JAKOBBBBB
 description: >
   9th July, 2023
 hide_description: false
