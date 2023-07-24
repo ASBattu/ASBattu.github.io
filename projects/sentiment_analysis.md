@@ -196,11 +196,35 @@ Output for calling this code:
 
 
 
-## AWS S3 Bucket Deployment:
-  - The model was hosted in an S3 bucket on Amazon Web Services (AWS).
-  - RESTful API calls were made to the model for performing inference.
-  - AWS SageMaker was used for hosting the model and creating an endpoint.
+## AWS S3 Bucket Deployment (images below):
+To deploy the trained model on AWS, the following steps were followed:
 
-    Additionally, I attempted to make use of AWS Comprehend for the task. However, fine-tuning the model with a custom dataset incurs costs which I decided not to take, but is a feasible option that I can perform if needed.
+1. **Creating a Flask Application:**  
+The Flask application was developed to create an interface for the trained model.
 
+2. **Setting up an EC2 Instance:**  
+An EC2 instance was created on AWS to host the application.
+
+3. **Configuring Deep Learning Amazon Machine Image:**  
+A deep learning Amazon Machine Image (Ubuntu 20.04) was set up on the EC2 instance.
+
+4. **Starting the Application on EC2 Instance:**  
+Using WinSCP and putty, communication with the operating system on the cloud was established, and the Flask application was started and run on the EC2 instance.
+
+In case of larger models or data, I would have used a S3 bucket to store and access the required resources.
+
+Moreover, I attempted to leverage AWS Comprehend for the task. However, the process of fine-tuning the model with a custom dataset incurs costs, which I decided against at the moment. Nonetheless, this remains a feasible option that can be undertaken if necessary.
+<hr style="border:2px solid gray">
+<p align="center" width="100%">
+    <img width="100%" src="https://i.gyazo.com/61dec55b27acf988ccb416c161d6415c.png">
+</p>
+Positive Inference:
+{:.figure}
+<hr style="border:2px solid gray">
+<p align="center" width="100%">
+    <img width="100%" src="https://i.gyazo.com/78ed3d2506611a4bd0ca2062b61c0a49.png">
+</p>
+Negative Inference:
+{:.figure}
+<hr style="border:2px solid gray">
 

@@ -7,15 +7,6 @@ hide_description: true
 sitemap: false
 permalink: /projects/
 ---
-Here you can find the overview for all my documented projects.
-
-The **first heading contains notes divided by subject topic**. These description contain basic definitions and personal notes to review when working on the same topics in the future. 
-
-The **remainder of the page divides the projects by subjects**, giving brief but detailed description of the decisions made to implement the code and the conclusion for each experiment.
-
-Jupyter notebook code for all projects can be found in respective repositories on [Github](https://github.com/ASBattu?tab=repositories).
-
-
 This page is still unifinished and projects will be added once fully documented.
 {:.note}
 
@@ -24,10 +15,6 @@ This page is still unifinished and projects will be added once fully documented.
 
 ## Masters Thesis Project
 * [Communication in Human-Robot Collaboration]{:.heading.flip-title}
-
-## Topic Summaries and Notes
-* [Deep Reinforcement Learning]{:.heading.flip-title} --- Basic definitions and topics.
-* [Machine Learning Tensorflow]{:.heading.flip-title} --- Definitions and topics.
 
 ## Sentiment Analysis - Docker / AWS implementation
 * [Sentiment Analysis]{:.heading.flip-title} --- Execution and description
@@ -74,7 +61,9 @@ This page is still unifinished and projects will be added once fully documented.
 * Theo Jansen walking mechanism
 * 11 Segment 6 Digit display
 
-
+## Topic Summaries and Notes
+* [Deep Reinforcement Learning]{:.heading.flip-title} --- Basic definitions and topics.
+* [Machine Learning Tensorflow]{:.heading.flip-title} --- Definitions and topics.
 
 
 [Deep Reinforcement Learning]: desc_deep_rl.md

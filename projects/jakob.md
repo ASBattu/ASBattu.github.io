@@ -12,7 +12,7 @@ sitemap: false
 
 
 <p align="center" width="100%">
-    <img width="70%" src="https://i.gyazo.com/5774772df7258d22c15ce331c1edfba2.jpg">
+    <img width="70%" src="">
 </p>
 
 
