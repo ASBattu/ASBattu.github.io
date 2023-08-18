@@ -8,15 +8,13 @@ author1:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    I am Amitoj Battu, currently pursuing **Masters in Artificial Intelligence** at the **University of Groningen**.
+    Hey, I'm Battu, a recent graduate in **MSc in Artificial Intelligence** from the **University of Groningen**.
     
-    Having a passion for robotics, my graduation thesis revolves around combining AI with robotics for a **Human-Robot collaborative** task.
-
     This website is designed to showcase my projects involving **AI** and **robotics**, to record my progress in various research topics while documenting each
     in detail. To find out more, head to the [**Projects**](/projects/) tab.
 
-    This website is still under development and overtime further projects will be added.
-    {:.note}
+  # This website is still under development and overtime further projects will be added.
+  # {:.note}
     
   # Open `_data/authors.yml` to edit this text.
 

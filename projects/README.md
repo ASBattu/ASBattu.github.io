@@ -7,7 +7,7 @@ hide_description: true
 sitemap: false
 permalink: /projects/
 ---
-This page is still unifinished and projects will be added once fully documented.
+Additional projects will be added once fully documented.
 {:.note}
 
 1. this list will be replaced by the toc
@@ -23,7 +23,7 @@ This page is still unifinished and projects will be added once fully documented.
 * [Unit 1 - Lunar Lander]{:.heading.flip-title} --- Execution and description
 
 ## Robot Operating System
-* SLAM - ROS
+* [SLAM implementation on a 4 wheeled meccanum robot with a mounted robotic arm!]{:.heading.flip-title} --- Execution
 * Robotic arm simulation
 * Moorebot 'Scout' - modules from scratch
 
@@ -72,3 +72,4 @@ This page is still unifinished and projects will be added once fully documented.
 [1 - Image Classification]: 1_image_classification.md
 [Communication in Human-Robot Collaboration]: master_thesis.md
 [Sentiment Analysis]: sentiment_analysis.md
+[SLAM implementation on a 4 wheeled meccanum robot with a mounted robotic arm!]: SLAM_ROS_robot.md
